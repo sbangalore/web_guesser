@@ -1,5 +1,7 @@
+require 'rubygems'
+require 'bundler/setup'
 require 'sinatra'
-require 'sinatra/reloader'
+require 'sinatra/reloader' if development?
 
 @@secret_number = rand(100)
 @@guesses_left = 5
